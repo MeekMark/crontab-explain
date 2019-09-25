@@ -31,7 +31,8 @@ $DEBUG = defined $ENV{'DEBUG'};
 
 my ($curr_sec,$curr_min,$curr_hour,$curr_mday,$curr_mon,$curr_year,$curr_wday,$curr_yday,$curr_isdst) =
                                                 localtime(time);
-print "Current date/time:\n$curr_hour:$curr_min:$curr_sec day $curr_mday of month $month_names[$curr_mon] on $day_names[$curr_wday]\n";
+printf "Current time/date:\n   %02d:%02d:%02d day %d of %s on %s\n",
+        $curr_hour,$curr_min,$curr_sec,$curr_mday,$month_names[$curr_mon],$day_names[$curr_wday];
 
 while (<>)
 {
